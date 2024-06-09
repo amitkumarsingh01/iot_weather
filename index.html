@@ -29,6 +29,9 @@
         .sidebar.active {
             transform: translateX(0);
         }
+        .content.active {
+            margin-left: 250px;
+        }
         .sidebar a {
             color: white;
             display: block;
@@ -172,7 +175,7 @@
                         <div class="bg-white h-1 w-8 mb-1"></div>
                         <div class="bg-white h-1 w-8"></div>
                     </div>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
@@ -482,7 +485,17 @@ async function plotGraph() {
 
 fetchSensorData();
 setInterval(fetchSensorData, 10000);
+
 </script>
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+        var content = document.getElementById('content');
+        sidebar.classList.toggle('active');
+        content.classList.toggle('active');
+    }
+</script>
+
 <!--
 <script>
     function toggleSidebar() {
