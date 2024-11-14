@@ -318,7 +318,7 @@
         }
 
         async function loadMoreData() {
-            const url = `https://api.thingspeak.com/channels/2547863/feeds.json?results=${numResultsLoaded}`;
+            const url = `https://api.thingspeak.com/channels/2576557/feeds.json?results=${numResultsLoaded}`;
             const feeds = await fetchData(url);
             renderData(feeds);
             numResultsLoaded += 10; // Increment the number of results loaded for the next request
@@ -396,7 +396,7 @@ let chart;
 
 async function fetchSensorData() {
     try {
-        const response = await fetch('https://api.thingspeak.com/channels/2547863/feeds.json?results=1');
+        const response = await fetch('https://api.thingspeak.com/channels/2576557/feeds.json?results=1');
         const data = await response.json();
         const feed = data.feeds[0];
 
@@ -435,7 +435,7 @@ async function plotGraph() {
     const yParam = document.getElementById('y-param').value;
     const numValues = document.getElementById('num-values').value;
 
-    const url = `https://api.thingspeak.com/channels/2547863/feeds.json?results=${numValues}`;
+    const url = `https://api.thingspeak.com/channels/2576557/feeds.json?results=${numValues}`;
     const response = await fetch(url);
     const data = await response.json();
     const feeds = data.feeds;
@@ -505,7 +505,7 @@ setInterval(fetchSensorData, 10000);
 
     async function fetchSensorData() {
         try {
-            const response = await fetch('https://api.thingspeak.com/channels/2547863/feeds.json?results=1');
+            const response = await fetch('https://api.thingspeak.com/channels/2576557/feeds.json?results=1');
             const data = await response.json();
             const feed = data.feeds[0];
 

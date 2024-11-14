@@ -8,10 +8,10 @@
 #define I2C_ADDR 0x27          
 #define BACKLIGHT_PIN 3        
 
-const char* ssid = "Project";
+const char* ssid = "Amit";
 const char* password = "12345678";
 const char* server = "api.thingspeak.com";
-const String apiKey = "06IR108Z4OIHFJ16"; 
+const String apiKey = "UOGDF6SO3YSJT0YI"; 
 
 const int sensorPin1 = 35; 
 const int sensorPin2 = 36; 
